@@ -6,6 +6,7 @@ import AdminPage from './AdminPage'
 import StudentPage from './StudentPage'
 import Error from './Error'
 import AdminAccountCreate from './AdminAccountCreate'
+import StudentAccountCreate from './StudentAccountCreate'
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
     <Route path='/StudentPage' element={<StudentPage/>}/>
     <Route path='/*' element={<Error/>}/>
     <Route path='/AdminAccountCreate' element={<AdminAccountCreate/>}/>
+    <Route path='/StudentAccountCreate' element={<StudentAccountCreate/>}/>
    </Routes>
    </BrowserRouter>
    </React.Fragment>
