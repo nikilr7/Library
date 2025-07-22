@@ -2,17 +2,36 @@ import React, { useRef } from 'react'
 import Naving from './Navbar'
 import { Link } from 'react-router-dom';
 import DoneIcon from '@mui/icons-material/Done';
+import axios from 'axios';
+import { toast } from 'react-toastify';
+import { useEffect } from 'react';
 
 const AdminPage = () => {
+
+  const [check, setCheck] = React.useState([]);
     
     const username=useRef("");
     const password=useRef("");
 
-    function verify(e)
+    useEffect(() => {
+          axios.get("http://localhost:8080/Admin/FindAllAdmin")
+        .then((resp)=>
+        {
+          setCheck(resp.data.data);
+          console.log(resp.data.data);
+        })
+        .catch((err)=>
+        {
+          console.log(err);
+        })
+      },[]);
+      
+
+   async function verify(e)
     {
         e.preventDefault();
-        console.log(username.current.value);
-         console.log(password.current.value);
+
+
     }
     
   return (
