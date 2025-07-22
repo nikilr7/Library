@@ -98,7 +98,7 @@ const AdminAccountCreate = () => {
       value={values.password}
       onBlur={handleBlur}
       className={`border-4 border-amber-600 mt-10 mr-20 rounded-4xl  text-4xl outline-0 font-bold ${ touched.password && errors.password ? 'border-red-500' : ''}`}
-      placeholder='Enter the Total Pages'
+      placeholder='Enter the Password'
       />
 
       <button 
